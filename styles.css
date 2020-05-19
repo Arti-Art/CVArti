@@ -32,7 +32,7 @@ html {
 img {
     max-width: 100%;}
 
-/* ///// GRID ///// */
+/* ///// MAIN GRID ///// */
 
 .container {
     display: grid;
@@ -62,7 +62,7 @@ img {
 .edu {grid-area: edu;}
 .footer {grid-area: footer;}
 
-/* ///// MEDIA QUERIES ///// */
+/* ///// LAYOUT ///// */
 
 @media (min-width: 800px) {
     .container {
@@ -72,9 +72,6 @@ img {
             "skills skills skills"
             "edu job job"
             "footer footer footer";
-    }
-    .header img {
-        order: -1;
     }
 }
 
@@ -88,21 +85,6 @@ img {
             "footer footer footer footer";
         max-width: 1200px;
     }
-    .skills {
-        flex-direction: column;
-    }
-}
-
-    /* When small viewport, put name before picture */
-@media (max-width: 799px) {
-    .header {
-        flex-direction: column;
-        align-items: center;
-    }
-    /* Center Name */
-    .name {
-        text-align: center;
-    }
 }
 
 /* ///// GENERAL ///// */
@@ -115,7 +97,7 @@ body {
 }
 
 .container > * {
-    display: flex;
+    display: grid;
 }
 
 ul {
@@ -149,10 +131,44 @@ h4 {
 
 /* ///// .HEADER ///// */
 
+.header {
+    grid-template-areas: 
+        "name"
+        "img"
+        "profession"
+        "description";
+    grid-template-columns: 4;
+}
+
+.name {grid-area: name;}
+.img {grid-area: img;}
+.profession {grid-area: profession;}
+.description {grid-area: description;}
+
+@media (min-width: 800px) {
+    .header {
+        grid-template-areas: 
+            "img name name name"
+            "img profession profession profession"
+            "img description description description";
+    }
+    .img {
+        margin-right: 20px;
+    }
+}
+
+@media (max-width: 799px) {
+    .header {
+        justify-items: center;
+    }
+    .name, .profession, .description {
+        text-align: center;
+    }
+}
+
 img {
     max-width: 200px;
     border-radius: 20px;
-    margin-right: 20px;
 }
 
 .name {
@@ -161,20 +177,31 @@ img {
 
 .profession {
     font-size: 2rem;
+    font-style: italic;
+}
+
+.description {
+    font-size: 1.20rem;
 }
 
 /* ///// .SKILLLS ///// */
 
 .skills {
+    display: grid;
+}
+
+.flex {
+    display: flex;
     flex-wrap: wrap;
 }
 
-.skills h1 {
-    width: 100%;
+.flex > div {
+    min-width: 250px;
 }
 
-.boxskills {
-    min-width: 200px;
+.flex h2 {
+    font-weight: bold;
+    font-size: 1.10rem;
 }
 
 /* ///// .JOB ///// */
@@ -187,14 +214,21 @@ img {
     margin-left: 80px;
 }
 
-/* ///// .EDU ///// */
-
-.edu {
-    flex-direction: column;
+.job h2 {
+    font-weight: bold;
+    font-size: 1.5rem;
 }
 
-/* .boxedu {
+.job h3, .job h4 {
+    font-style: italic;
+    font-size: 1.20rem;
+}
 
-} */
+/* ///// .EDU ///// */
+
+.boxedu h2 {
+    font-weight: bold;
+    font-size: 1.10rem;
+}
 
 /* ///// .FOOTER ///// */
