@@ -50,7 +50,6 @@ img {
 .container {
     grid-template-areas: 
         "header"
-        "about"
         "skills"
         "job"
         "edu"
@@ -58,7 +57,6 @@ img {
 }
 
 .header {grid-area: header;}
-.about {grid-area: about;}
 .skills {grid-area: skills;}
 .job {grid-area: job;}
 .edu {grid-area: edu;}
@@ -71,10 +69,12 @@ img {
         grid-template-columns: repeat(3, 1fr);
         grid-template-areas: 
             "header header header"
-            "about about about"
             "skills skills skills"
             "edu job job"
             "footer footer footer";
+    }
+    .header img {
+        order: -1;
     }
 }
 
@@ -82,7 +82,7 @@ img {
     .container {
         grid-template-columns: repeat(4, 1fr);
         grid-template-areas: 
-            "header about about about"
+            "header header header header"
             "skills job job job"
             "edu job job job"
             "footer footer footer footer";
@@ -96,7 +96,7 @@ img {
     /* When small viewport, put name before picture */
 @media (max-width: 799px) {
     .header {
-        flex-direction: column-reverse;
+        flex-direction: column;
         align-items: center;
     }
     /* Center Name */
@@ -157,12 +157,6 @@ img {
 
 .name {
     font-size: 3rem;
-}
-
-/* ///// .ABOUT ///// */
-
-.about {
-    flex-direction: column;
 }
 
 .profession {
