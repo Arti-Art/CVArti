@@ -1,3 +1,26 @@
+/* Meyer's CSS reset */
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+
 /* ///// RESPONSIVE BASE ///// */
 
 html {
@@ -18,9 +41,8 @@ img {
 }
 
 .container > * {
-    border: 8px solid rgb(12, 62, 119);
     border-radius: 6px;
-	background-color: rgba(0, 0, 0, 0.144);
+	background-color: rgba(0, 153, 255, 0.178);
     padding: 10px;
     color: white;
 }
@@ -83,7 +105,7 @@ img {
     }
 }
 
-/* ///// GENERAL STYLING ///// */
+/* ///// GENERAL ///// */
 
 /* BG Image */
 body {
@@ -92,12 +114,37 @@ body {
     background-attachment: fixed;
 }
 
-.header, .about, .skills, .edu, .footer {
+.container > * {
     display: flex;
+}
+
+ul {
+    margin-left: 60px;
+}
+
+/* ///// FONTS ///// */
+
+body * {
+    font-family: 'Open Sans', sans-serif;
 }
 
 h1 {
     text-decoration: underline;
+    font-size: 1.5rem;
+    background-color: rgba(0, 138, 218, 0.87);
+}
+
+h2 {
+    background-color: rgba(0, 116, 184, 0.678);
+    padding-left: 20px;
+}
+
+h3 {
+    padding-left: 40px;
+}
+
+h4 {
+    text-align: right;
 }
 
 /* ///// .HEADER ///// */
@@ -109,7 +156,7 @@ img {
 }
 
 .name {
-    font-size: xx-large;
+    font-size: 3rem;
 }
 
 /* ///// .ABOUT ///// */
@@ -119,7 +166,7 @@ img {
 }
 
 .profession {
-    font-size: x-large;
+    font-size: 2rem;
 }
 
 /* ///// .SKILLLS ///// */
@@ -128,9 +175,12 @@ img {
     flex-wrap: wrap;
 }
 
+.skills h1 {
+    width: 100%;
+}
+
 .boxskills {
     min-width: 200px;
-    margin-right: 20px;
 }
 
 /* ///// .JOB ///// */
@@ -139,8 +189,8 @@ img {
     display: grid;
 }
 
-h2 {
-    background-color: rgb(38, 91, 107);
+.job ul {
+    margin-left: 80px;
 }
 
 /* ///// .EDU ///// */
