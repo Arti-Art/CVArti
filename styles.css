@@ -40,14 +40,6 @@ img {
 	margin: auto;
 }
 
-.container > * {
-
-	background-color: rgba(0, 153, 255, 0.178);
-    color: white;
-    border: 10px solid rgba(0, 153, 255, 0.178);
-    border-radius: 6px;
-}
-
 .container {
     grid-template-areas: 
         "header"
@@ -84,11 +76,17 @@ img {
             "skills job job job"
             "edu job job job"
             "footer footer footer footer";
-        max-width: 1200px;
+        max-width: 1000px;
     }
 }
 
 /* ///// GENERAL ///// */
+
+.container > * {
+	background-color: rgba(0, 153, 255, 0.178);
+    color: white;
+}
+
 
 /* BG Image */
 body {
@@ -112,9 +110,9 @@ body * {
 }
 
 h1 {
-    text-decoration: underline;
     font-size: 1.5rem;
     background-color: rgba(0, 138, 218, 0.87);
+    text-align: center;
 }
 
 h2 {
@@ -139,6 +137,7 @@ h4 {
         "profession"
         "description";
     grid-template-columns: 4;
+    padding: 20px;
 }
 
 .name {grid-area: name;}
@@ -199,6 +198,7 @@ img {
 .flex > div {
     flex-basis: 250px;
     flex-grow: 1;
+    padding-bottom: 12px;
 }
 
 .flex h2 {
@@ -214,6 +214,7 @@ img {
 
 .job ul {
     margin-left: 80px;
+    padding-bottom: 12px;
 }
 
 .job h2 {
@@ -221,16 +222,31 @@ img {
     font-size: 1.5rem;
 }
 
-.job h3, .job h4 {
+.job h3 {
     font-style: italic;
     font-size: 1.20rem;
 }
 
+.job h4 {
+    font-style: italic;
+    font-size: 1.10rem;
+    margin-right: 15px;
+}
+
 /* ///// .EDU ///// */
+
+.boxedu {
+    padding-bottom: 12px;
+}
 
 .boxedu h2 {
     font-weight: bold;
     font-size: 1.10rem;
+}
+
+.boxedu h4 {
+    font-style: italic;
+    margin-right: 15px;
 }
 
 /* ///// .FOOTER ///// */
