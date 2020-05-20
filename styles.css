@@ -41,10 +41,11 @@ img {
 }
 
 .container > * {
-    border-radius: 6px;
+
 	background-color: rgba(0, 153, 255, 0.178);
-    padding: 10px;
     color: white;
+    border: 10px solid rgba(0, 153, 255, 0.178);
+    border-radius: 6px;
 }
 
 .container {
